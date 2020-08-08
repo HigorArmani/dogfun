@@ -3,6 +3,7 @@ import App from './App.vue'
 import store from '@/store'
 import router from '@/routes.js'
 import vuetify from './plugins/vuetify'
+import VueAxios from 'vue-axios'
 
 Vue.config.productionTip = false
 
@@ -12,4 +13,5 @@ new Vue({
   router,
   store,
   vuetify,
+  VueAxios
 })
