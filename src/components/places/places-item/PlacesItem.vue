@@ -1,10 +1,8 @@
 <template>
-  <v-card class="mx-auto" max-width="400">
+  <v-card class="mx-auto">
+    <CoverImage :image="place.image" :title="place.title" />
 
-    <v-img class="white--text align-end mImg" height="200px" :src="require('@/assets/images/' + place.image)" />
-    <v-card-title class="title">{{place.title}}</v-card-title>
-
-    <span  />
+    <span />
     <v-card-subtitle class="pb-0">
       <v-rating :value="place.stars" color="amber" dense half-increments readonly size="20"></v-rating>
     </v-card-subtitle>
@@ -14,16 +12,29 @@
     </v-card-text>
 
     <v-card-actions>
-      <v-btn color="orange" :to="{ name: 'placedetails', params: { id: place.id }}" text>Ver Mais</v-btn>
+      <v-btn
+        color="orange"
+        :to="{ name: 'placedetails', params: { description: titleParams, id: place.id }}"
+        text
+      >Ver Mais</v-btn>
     </v-card-actions>
   </v-card>
 </template>
 <script>
+import CoverImage from "@/components/shared/cover-image/CoverImage"
 export default {
+  components: {
+    CoverImage,
+  },
   props: {
     place: {
       type: Object,
       required: true,
+    },
+  },
+  computed: {
+    titleParams() {
+      return this.place.title.split(" ").join("-");
     },
   },
 };
@@ -33,16 +44,4 @@ export default {
   display: block;
   height: 50px;
 }
-.mImg {
-  filter: brightness(0.8);
-}
-.title{
-  position: absolute;
-  top: 150px;
-  left: 4px;
-  font-size: 18px;
-  color: white;
-  margin-bottom: 100px;
-}
-
 </style>

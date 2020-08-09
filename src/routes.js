@@ -13,7 +13,7 @@ export default new VueRouter({
             component: Places
         },
         {
-            path: 'placedetails/:id',
+            path: '/placedetails/:id/:description',
             name: 'placedetails',
             component: PlacesDetails
         },

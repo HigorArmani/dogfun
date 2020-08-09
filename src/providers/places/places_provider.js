@@ -1,5 +1,5 @@
-import ApiProviders from "./api_provider"
-import { API_PLACES } from "../utils/cons/api"
+import ApiProviders from "@/providers/api_provider"
+import { API_PLACES } from "@/utils/cons/api"
 
 const PlacesProvider = {
 

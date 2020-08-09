@@ -12,9 +12,7 @@
       <!-- Conteudo -->
       <v-col cols="9">
         <v-main>
-          <v-container>
-            <router-view></router-view>
-          </v-container>
+          <router-view></router-view>
         </v-main>
       </v-col>
     </v-row>
@@ -43,8 +41,3 @@ export default {
   }),
 };
 </script>
-<style lang="scss" scoped>
-.mContent {
-  margin-left: 130px;
-}
-</style>

@@ -56,5 +56,81 @@
             "stars": 5,
             "image": "place03.jpg"
         }
+    ],
+    "placeshints": [
+        {
+            "id": 1,
+            "place": {
+                "id": 8,
+                "title": "Bar do Cão",
+                "description": "Deixe seu cão se sentar com seus amigos e se divertir",
+                "stars": 5,
+                "image": "place03.jpg"
+            }
+        },
+        {
+            "id": 2,
+            "place": {
+                "id": 6,
+                "title": "Bar do Cão",
+                "description": "Deixe seu cão se sentar com seus amigos e se divertir",
+                "stars": 4,
+                "image": "place06.jpg"
+            }
+        },
+        {
+            "id": 3,
+            "place": {
+                "id": 5,
+                "title": "Bar do Cão",
+                "description": "Deixe seu cão se sentar com seus amigos e se divertir",
+                "stars": 3,
+                "image": "place05.jpg"
+            }
+        },
+        {
+            "id": 4,
+            "place": {
+                "id": 1,
+                "title": "Casinha Dog",
+                "description": "Um lugar Confortavel para o seu cão",
+                "stars": 4,
+                "image": "place01.jpg"
+            }
+        }
+    ],
+    "ratings": [
+        {
+            "id": 1,
+            "idPlace": 1,
+            "stars": 5,
+            "review": "Adorei o Local, muito amor aos animais",
+            "thumbsUp": 20,
+            "thumbsDown": 0
+        },
+        {
+            "id": 2,
+            "idPlace": 1,
+            "stars": 4,
+            "review": "Instrutor muito dedicado e atencioso",
+            "thumbsUp": 10,
+            "thumbsDown": 0
+        },
+        {
+            "id": 3,
+            "idPlace": 5,
+            "stars": 2,
+            "review": "Achei desorganizado e atendimento fraco",
+            "thumbsUp": 10,
+            "thumbsDown": 4
+        },
+        {
+            "id": 4,
+            "idPlace": 8,
+            "stars": 4,
+            "review": "Estão de parabéns, meu cão adorou a comida",
+            "thumbsUp": 12,
+            "thumbsDown": 5
+        }
     ]
 }
