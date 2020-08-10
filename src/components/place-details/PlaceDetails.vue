@@ -67,7 +67,9 @@ export default {
   },
   methods: {
     getList() {
-      PlacesProvider.get(this.id, success => this.place = success.data)
+      PlacesProvider.get(this.id, success => {
+        this.place = success.data
+      })
     },
   },
   beforeRouteUpdate(to, from, next) {
