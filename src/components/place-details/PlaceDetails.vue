@@ -80,4 +80,6 @@ export default {
     RatingsProvider.getList(success => this.ratings = success.data)
   },
 }
+
+// comentario de teste
 </script>
