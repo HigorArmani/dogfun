@@ -1,5 +1,5 @@
 <template>
-  <v-row align="left">
+  <v-row>
     <v-col cols="3" v-for="place in places" :key="place.id">
       <PlacesItem :place="place" />
     </v-col>
