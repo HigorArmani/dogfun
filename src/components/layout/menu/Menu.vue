@@ -5,7 +5,7 @@
       <v-container fluid>
         <v-row align="center">
           <v-col cols="12">
-            <v-autocomplete dense filled label="Buscar..." hide-no-data></v-autocomplete>
+            <v-autocomplete dense filled label="Pesquisar..." hide-no-data></v-autocomplete>
           </v-col>
         </v-row>
       </v-container>
