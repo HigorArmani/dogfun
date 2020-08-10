@@ -12,7 +12,7 @@
 
       <v-list subheader two-line flat>
 
-        <FilterItem groupName="Opções de Busca" :filters="builds"/>
+        <FilterItem groupName="Opções de Buscas" :filters="builds"/>
         <FilterItem groupName="Locais" :filters="states"/>
 
       </v-list>
