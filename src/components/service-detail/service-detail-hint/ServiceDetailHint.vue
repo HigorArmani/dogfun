@@ -1,14 +1,14 @@
 <template>
-  <div v-if="placeshints">
+  <div v-if="servicehints">
     <v-container class="list">
-      <div v-for="hint in placeshints" :key="hint.id">
+      <div v-for="hint in servicehints" :key="hint.id">
         <v-row>
           <v-card class="mx-auto" max-width="400">
-            <CoverImage :image="hint.place.image" :title="hint.place.title" />
+            <CoverImage :image="hint.service.image" :title="hint.service.title" />
 
             <v-card-subtitle class="pb-0">
               <v-rating
-                :value="hint.place.stars"
+                :value="hint.service.stars"
                 color="amber"
                 dense
                 half-increments
@@ -18,7 +18,7 @@
             </v-card-subtitle>
 
             <v-card-text class="text--primary">
-              <div>{{hint.place.description}}</div>
+              <div>{{hint.service.description}}</div>
               <v-chip-group active-class="deep-purple accent-4 white--text" column>
                 <v-chip>Petshop</v-chip>
                 <v-chip>Hostel</v-chip>
@@ -29,7 +29,7 @@
             <v-card-actions>
               <v-btn
                 color="orange"
-                :to="{ name: 'placedetails', params: { description: titleParams(hint.place), id: hint.place.id }}"
+                :to="{ name: 'servicedetails', params: { description: titleParams(hint.service), id: hint.service.id }}"
                 text
               >Ver Mais</v-btn>
             </v-card-actions>
@@ -41,22 +41,22 @@
   </div>
 </template>
 <script>
-import PlacesHintsProvider from "@/providers/places/places_hints_provider";
-import CoverImage from "@/components/shared/cover-image/CoverImage";
+import ServiceHintProvider from "@/providers/services/service_hint_provider"
+import CoverImage from "@/components/shared/cover-image/CoverImage"
 export default {
   components: {
     CoverImage,
   },
   data() {
     return {
-      placeshints: [],
+      servicehints: [],
     };
   },
   computed: {
-    titleParams: () => (place) => place.title.split(" ").join("-"),
+    titleParams: () => service => service.title.split(" ").join("-"),
   },
   mounted() {
-    PlacesHintsProvider.getList((success) => (this.placeshints = success.data));
+    ServiceHintProvider.getList(success => this.servicehints = success.data)
   },
 };
 </script>
