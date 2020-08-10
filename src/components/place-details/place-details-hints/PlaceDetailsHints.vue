@@ -41,8 +41,8 @@
   </div>
 </template>
 <script>
-import PlacesHintsProvider from "@/providers/places/places_hints_provider";
-import CoverImage from "@/components/shared/cover-image/CoverImage";
+import PlacesHintsProvider from "@/providers/places/places_hints_provider"
+import CoverImage from "@/components/shared/cover-image/CoverImage"
 export default {
   components: {
     CoverImage,
@@ -56,7 +56,7 @@ export default {
     titleParams: () => (place) => place.title.split(" ").join("-"),
   },
   mounted() {
-    PlacesHintsProvider.getList((success) => (this.placeshints = success.data));
+    PlacesHintsProvider.getList(success => this.placeshints = success.data)
   },
 };
 </script>
