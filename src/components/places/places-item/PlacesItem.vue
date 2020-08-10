@@ -21,7 +21,7 @@
   </v-card>
 </template>
 <script>
-import CoverImage from "@/components/shared/cover-image/CoverImage"
+import CoverImage from "@/components/shared/cover-image/CoverImage";
 export default {
   components: {
     CoverImage,

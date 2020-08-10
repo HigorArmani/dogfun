@@ -1,34 +1,43 @@
 <template>
-  <div>
-    <div v-for="hint in placeshints" :key="hint.id">
-      <v-card class="mx-auto" max-width="400">
-        <CoverImage :image="hint.place.image" :title="hint.place.title" />
+  <div v-if="placeshints">
+    <v-container class="list">
+      <div v-for="hint in placeshints" :key="hint.id">
+        <v-row>
+          <v-card class="mx-auto" max-width="400">
+            <CoverImage :image="hint.place.image" :title="hint.place.title" />
 
-        <v-card-subtitle class="pb-0">
-          <v-rating
-            :value="hint.place.stars"
-            color="amber"
-            dense
-            half-increments
-            readonly
-            size="20"
-          ></v-rating>
-        </v-card-subtitle>
+            <v-card-subtitle class="pb-0">
+              <v-rating
+                :value="hint.place.stars"
+                color="amber"
+                dense
+                half-increments
+                readonly
+                size="20"
+              ></v-rating>
+            </v-card-subtitle>
 
-        <v-card-text class="text--primary">
-          <div>{{hint.place.description}}</div>
-          <v-chip-group active-class="deep-purple accent-4 white--text" column>
-            <v-chip>Petshop</v-chip>
-            <v-chip>Hostel</v-chip>
-          </v-chip-group>
-        </v-card-text>
+            <v-card-text class="text--primary">
+              <div>{{hint.place.description}}</div>
+              <v-chip-group active-class="deep-purple accent-4 white--text" column>
+                <v-chip>Petshop</v-chip>
+                <v-chip>Hostel</v-chip>
+                <v-chip>06:00 as 21:00</v-chip>
+              </v-chip-group>
+            </v-card-text>
 
-        <v-card-actions>
-          <v-btn color="orange" text>Ver Mais</v-btn>
-        </v-card-actions>
-      </v-card>
-      <br />
-    </div>
+            <v-card-actions>
+              <v-btn
+                color="orange"
+                :to="{ name: 'placedetails', params: { description: titleParams(hint.place), id: hint.place.id }}"
+                text
+              >Ver Mais</v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-row>
+        <br />
+      </div>
+    </v-container>
   </div>
 </template>
 <script>
@@ -43,8 +52,36 @@ export default {
       placeshints: [],
     };
   },
+  computed: {
+    titleParams: () => (place) => place.title.split(" ").join("-"),
+  },
   mounted() {
     PlacesHintsProvider.getList((success) => (this.placeshints = success.data));
   },
 };
 </script>
+<style lang="scss">
+.list {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: 1000px;
+  width: 400px;
+}
+.scrollable-element {
+  scrollbar-width: none;
+} /* make scrollbar transparent */
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+.container {
+  /* IE 10+ */
+  -ms-overflow-style: none;
+  /* Firefox */
+  scrollbar-width: none;
+}
+.container::-webkit-scrollbar {
+  /* Safari and Chrome */
+  display: none;
+}
+</style>

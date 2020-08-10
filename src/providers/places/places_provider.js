@@ -5,6 +5,10 @@ const PlacesProvider = {
 
     getList(onSuccess, onFailure) {
         ApiProviders.getList(API_PLACES, onSuccess, onFailure)
+    },
+
+    get(id, onSuccess, onFailure) {
+        ApiProviders.getList(`${API_PLACES}/${id}`, onSuccess, onFailure)
     }
 
 }
