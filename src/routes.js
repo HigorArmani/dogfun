@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Places from '@/components/places/Places.vue'
-import PlacesDetails from '@/components/place-details/PlaceDetails.vue'
+import Service from '@/components/service/Service.vue'
+import ServiceDetail from '@/components/service-detail/ServiceDetail.vue'
 
 Vue.use(VueRouter)
 
@@ -9,13 +9,13 @@ export default new VueRouter({
     routes: [
         {
             path: '',
-            name: 'places',
-            component: Places
+            name: 'service',
+            component: Service
         },
         {
-            path: '/placedetails/:id/:description',
-            name: 'placedetails',
-            component: PlacesDetails
+            path: '/servicedetail/:id/:description',
+            name: 'servicedetail',
+            component: ServiceDetail
         },
     ]
 })

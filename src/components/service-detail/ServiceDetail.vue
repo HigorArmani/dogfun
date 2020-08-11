@@ -2,21 +2,21 @@
   <div>
     <v-row>
       <v-col cols="9">
-        <v-card v-if="place">
-          <v-img height="250" :src="require('@/assets/images/' + place.image)" />
+        <v-card v-if="service">
+          <v-img height="250" :src="require('@/assets/images/' + service.image)" />
 
-          <v-card-title>{{place.title}}</v-card-title>
+          <v-card-title>{{service.title}}</v-card-title>
 
           <v-card-text>
             <v-row align="center" class="mx-0">
-              <v-rating :value="place.stars" color="amber" dense half-increments readonly size="14"></v-rating>
+              <v-rating :value="service.stars" color="amber" dense half-increments readonly size="14"></v-rating>
 
-              <div class="grey--text ml-4">{{place.stars}} (25 votações)</div>
+              <div class="grey--text ml-4">{{service.stars}} (25 votações)</div>
             </v-row>
 
             <div class="my-4 subtitle-1" color="green">R$ 50,00 diária</div>
 
-            <div>{{ place.description }}</div>
+            <div>{{ service.description }}</div>
           </v-card-text>
 
           <v-divider class="mx-4"></v-divider>
@@ -40,7 +40,7 @@
       </v-col>
 
       <v-col cols="3">
-        <PlaceDetailsHints />
+        <ServiceDetailHint />
       </v-col>
     </v-row>
   </div>
@@ -48,28 +48,26 @@
 
 <script>
 import Rating from "@/components/shared/rating/Rating.vue"
-import PlacesProvider from "@/providers/places/places_provider"
-import PlaceDetailsHints from "./place-details-hints/PlaceDetailsHints"
-import RatingsProvider from "@/providers/global/ratings_provider"
+import ServiceProvider from "@/providers/services/service_provider"
+import ServiceDetailHint from "./service-detail-hint/ServiceDetailHint"
+import RatingsProvider from "@/providers/globals/ratings_provider"
 
 export default {
   components: {
     Rating,
-    PlaceDetailsHints,
+    ServiceDetailHint,
   },
   data() {
     return {
       id: this.$route.params.id,
       selection: 1,
-      place: null,
+      service: null,
       ratings: []
     }
   },
   methods: {
     getList() {
-      PlacesProvider.get(this.id, success => {
-        this.place = success.data
-      })
+      ServiceProvider.get(this.id, success => this.service = success.data)
     },
   },
   beforeRouteUpdate(to, from, next) {
