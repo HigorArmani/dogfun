@@ -14,7 +14,7 @@
                 half-increments
                 readonly
                 size="20"
-              ></v-rating>
+              />
             </v-card-subtitle>
 
             <v-card-text class="text--primary">
@@ -29,7 +29,7 @@
             <v-card-actions>
               <v-btn
                 color="orange"
-                :to="{ name: 'servicedetails', params: { description: titleParams(hint.service), id: hint.service.id }}"
+                :to="{ name: 'servicedetail', params: { description: titleParams(hint.service), id: hint.service.id }}"
                 text
               >Ver Mais</v-btn>
             </v-card-actions>
