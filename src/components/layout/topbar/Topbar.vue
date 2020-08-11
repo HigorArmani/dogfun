@@ -26,8 +26,15 @@
 
     <v-spacer></v-spacer>
 
-    <v-btn target="_blank" text>
-      <v-icon>mdi-dog</v-icon>
+    <v-btn title="Cadastrar um Serviço" class="mx-2" fab dark small color="pink darken-1">
+      <v-icon color="amber lighten-1" dark>mdi-plus-circle</v-icon>
     </v-btn>
+
+    <v-btn target="_blank" text>
+      <v-avatar size="36">
+        <v-img class="elevation-1" src="https://avataaars.io"></v-img>
+      </v-avatar>
+    </v-btn>
+
   </v-app-bar>
 </template>

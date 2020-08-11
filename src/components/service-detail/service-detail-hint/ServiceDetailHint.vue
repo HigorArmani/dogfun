@@ -42,6 +42,7 @@
 </template>
 <script>
 import ServiceHintProvider from "@/providers/services/service_hint_provider"
+import PlacesHintsProvider from "@/providers/places/places_hints_provider"
 import CoverImage from "@/components/shared/cover-image/CoverImage"
 export default {
   components: {
@@ -57,6 +58,7 @@ export default {
   },
   mounted() {
     ServiceHintProvider.getList(success => this.servicehints = success.data)
+    PlacesHintsProvider.getList(success => this.placeshints = success.data)
   },
 };
 </script>
