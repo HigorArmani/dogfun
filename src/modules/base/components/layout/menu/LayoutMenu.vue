@@ -12,20 +12,20 @@
 
       <v-list subheader two-line flat>
 
-        <FilterItem groupName="Opções de Busca" :filters="builds"/>
-        <FilterItem groupName="Locais" :filters="states"/>
+        <LayoutMenuFilter groupName="Opções de Busca" :filters="builds"/>
+        <LayoutMenuFilter groupName="Locais" :filters="states"/>
 
       </v-list>
     </v-navigation-drawer>
     </div>
 </template>
 <script>
-import { FILTER_TYPES } from "@/utils/cons/filter.js"
-import FilterItem from './filter-item/FilterItem.vue'
+import { FILTER_TYPES } from "@/modules/shared/utils/cons/filter.js"
+import LayoutMenuFilter from './layout-menu-filter/LayoutMenuFilter.vue'
 
 export default {
   components: {
-    FilterItem
+    LayoutMenuFilter
   },
   data() {
     return {
@@ -67,10 +67,10 @@ export default {
   },
   computed: {
     builds() {
-      return this.filters.filter((filter) => filter.type == FILTER_TYPES.BUILD)
+      return this.filters.filter(filter => filter.type == FILTER_TYPES.BUILD)
     },
     states() {
-      return this.filters.filter((filter) => filter.type == FILTER_TYPES.STATE)
+      return this.filters.filter(filter => filter.type == FILTER_TYPES.STATE)
     },
   },
 }

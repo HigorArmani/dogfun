@@ -3,7 +3,7 @@
     <h2>1. Termos</h2>
     <p>
       Ao acessar ao site
-      <a href="www.dogfu.com">Dog Fun</a>, concorda em cumprir estes termos de serviço, todas as leis e regulamentos aplicáveis e concorda que é responsável pelo cumprimento de todas as leis locais aplicáveis. Se você não concordar com algum desses termos, está proibido de usar ou acessar este site. Os materiais contidos neste site são protegidos pelas leis de direitos autorais e marcas comerciais aplicáveis.
+      <a href="www.dogfun.com">Dog Fun</a>, concorda em cumprir estes termos de serviço, todas as leis e regulamentos aplicáveis e concorda que é responsável pelo cumprimento de todas as leis locais aplicáveis. Se você não concordar com algum desses termos, está proibido de usar ou acessar este site. Os materiais contidos neste site são protegidos pelas leis de direitos autorais e marcas comerciais aplicáveis.
     </p>
     <h2>2. Uso de Licença</h2>
     <p>É concedida permissão para baixar temporariamente uma cópia dos materiais (informações ou software) no site Dog Fun , apenas para visualização transitória pessoal e não comercial. Esta é a concessão de uma licença, não uma transferência de título e, sob esta licença, você não pode:</p>

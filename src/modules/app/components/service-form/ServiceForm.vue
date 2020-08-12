@@ -74,8 +74,8 @@
 <script>
 import { validationMixin } from "vuelidate"
 import { required, maxLength } from "vuelidate/lib/validators"
-import TermsService from "@/components/shared/terms-service/TermsService.vue"
-import ServiceProvider from "@/providers/services/service_provider"
+import TermsService from "@/modules/shared/components/terms-service/TermsService.vue"
+import ServiceProvider from "@/modules/app/providers/service_provider"
 
 export default {
   components: {

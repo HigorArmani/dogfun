@@ -1,11 +1,11 @@
 <template>
   <div>
     <v-img
-      class="white--text align-end mImg"
+      class="white--text align-end dg-cover-img"
       height="200px"
       :src="require('@/assets/images/' + image)"
     />
-    <v-card-title class="title">{{title}}</v-card-title>
+    <v-card-title class="dg-cover-title">{{title}}</v-card-title>
   </div>
 </template>
 <script>
@@ -23,10 +23,10 @@ export default {
 };
 </script>
 <style lang="scss">
-.mImg {
+.dg-cover-img {
   filter: brightness(0.8);
 }
-.title {
+.dg-cover-title {
   position: absolute;
   top: 150px;
   left: 4px;

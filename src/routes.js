@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Service from '@/components/service/Service.vue'
-import ServiceForm from '@/components/service-form/ServiceForm.vue'
-import ServiceDetail from '@/components/service-detail/ServiceDetail.vue'
+import Service from '@/modules/app/components/service/Service.vue'
+import ServiceForm from '@/modules/app/components/service-form/ServiceForm.vue'
+import ServiceDetail from '@/modules/app/components/service-detail/ServiceDetail.vue'
 
 Vue.use(VueRouter)
 

@@ -1,12 +1,12 @@
 <template>
   <v-app>
     <!-- Barra do topo do layout principal -->
-    <Topbar />
+    <LayoutTopbar />
 
     <v-row>
       <!-- MENU ESQUERDO -->
       <v-col cols="2">
-        <Menu />
+        <LayoutMenu />
       </v-col>
 
       <!-- Conteudo -->
@@ -18,26 +18,21 @@
     </v-row>
 
     <!-- Rodapé da página -->
-    <Footer />
+    <LayoutFooter />
   </v-app>
 </template>
 
 <script>
-import Topbar from "@/components/layout/topbar/Topbar.vue";
-import Menu from "@/components/layout/menu/Menu.vue";
-import Footer from "@/components/layout/footer/Footer.vue";
+import LayoutTopbar from "@/modules/base/components/layout/topbar/LayoutTopbar.vue"
+import LayoutMenu from "@/modules/base/components/layout/menu/LayoutMenu.vue"
+import LayoutFooter from "@/modules/base/components/layout/footer/LayoutFooter.vue"
 
 export default {
   name: "App",
-
   components: {
-    Topbar,
-    Menu,
-    Footer,
+    LayoutTopbar,
+    LayoutMenu,
+    LayoutFooter,
   },
-
-  data: () => ({
-    //
-  }),
 };
 </script>
