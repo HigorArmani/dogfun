@@ -3,6 +3,7 @@
     <v-col cols="8">
       <v-card class="mx-auto dg-card">
         <form>
+
           <v-list-item>
             <v-list-item-content>
               <v-icon large color="green darken-2">mdi-domain</v-icon>
@@ -103,7 +104,7 @@ export default {
       formData: {
         title: null,
         description: null,
-        imagem: "service03.jpg",
+        imagem: null,
         openingHours: null,
         stars: 4,
         cover: "cover08.jpg"
@@ -140,7 +141,7 @@ export default {
     submit() {
       this.$v.$touch()
       if (this.$v.$anyError === false)
-        ServiceProvider.post(this.formData)
+        ServiceProvider.post(this.formData, () => this.$router.push({ name: 'service' }))
     },
   },
 }
