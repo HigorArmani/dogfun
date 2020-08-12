@@ -4,6 +4,7 @@ import store from '@/store'
 import router from '@/routes.js'
 import vuetify from './plugins/vuetify'
 import VueAxios from 'vue-axios'
+import Vuelidate from 'vuelidate'
 
 Vue.config.productionTip = false
 
@@ -13,5 +14,6 @@ new Vue({
   router,
   store,
   vuetify,
-  VueAxios
+  VueAxios,
+  Vuelidate
 })

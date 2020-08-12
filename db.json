@@ -1,152 +1,152 @@
 {
-    "services": [
-        {
-            "id": 1,
-            "title": "Casinha Dog",
-            "description": "Um lugar Confortavel para o seu cão",
-            "stars": 4,
-            "image": "service01.jpg",
-            "cover": "cover01.jpg"
-        },
-        {
-            "id": 2,
-            "title": "Pet da July",
-            "description": "Venha cuidar do seu dog com a July",
-            "stars": 5,
-            "image": "service02.jpg",
-            "cover": "cover02.jpg"
-        },
-        {
-            "id": 3,
-            "title": "Dog Summer",
-            "description": "O Lugar perfeito para seu cão passar o verão",
-            "stars": 3,
-            "image": "service08.jpg",
-            "cover": "cover03.jpg"
-        },
-        {
-            "id": 4,
-            "title": "Free Dog House",
-            "description": "Seu cachorro jamais se sentirá tão livre quanto aqui",
-            "stars": 2,
-            "image": "service04.jpg",
-            "cover": "cover04.jpg"
-        },
-        {
-            "id": 5,
-            "title": "Bar do Cão",
-            "description": "Deixe seu cão se sentar com seus amigos e se divertir",
-            "stars": 3,
-            "image": "service05.jpg",
-            "cover": "cover05.jpg"
-        },
-        {
-            "id": 6,
-            "title": "Cachorrão Hostel",
-            "description": "Entrará como um cãozinho e saíra como um cachorrão",
-            "stars": 4,
-            "image": "service06.jpg",
-            "cover": "cover06.jpg"
-        },
-        {
-            "id": 7,
-            "title": "Dog Happy",
-            "description": "Seu cachorro sentirá a alegria do nosso lar",
-            "stars": 4,
-            "image": "service07.jpg",
-            "cover": "cover07.jpg"
-        },
-        {
-            "id": 8,
-            "title": "Ração do Jhonny",
-            "description": "Nossos alimentos são 100% organicos e entregamos em casa",
-            "stars": 5,
-            "image": "service03.jpg",
-            "cover": "cover08.jpg"
-        }
-    ],
-    "serviceshints": [
-        {
-            "id": 1,
-            "service": {
-                "id": 8,
-                "title": "Ração do Jhonny",
-                "description": "Nossos alimentos são 100% organicos e entregamos em casa",
-                "stars": 5,
-                "image": "service03.jpg",
-                "cover": "cover08.jpg"
-            }
-        },
-        {
-            "id": 2,
-            "service": {
-                "id": 7,
-                "title": "Dog Happy",
-                "description": "Seu cachorro sentirá a alegria do nosso lar",
-                "stars": 4,
-                "image": "service07.jpg",
-                "cover": "cover07.jpg"
-            }
-        },
-        {
-            "id": 3,
-            "service": {
-                "id": 5,
-                "title": "Bar do Cão",
-                "description": "Deixe seu cão se sentar com seus amigos e se divertir",
-                "stars": 3,
-                "image": "service05.jpg",
-                "cover": "cover05.jpg"
-            }
-        },
-        {
-            "id": 4,
-            "service": {
-                "id": 7,
-                "title": "Dog Happy",
-                "description": "Seu cachorro sentirá a alegria do nosso lar",
-                "stars": 4,
-                "image": "service07.jpg",
-                "cover": "cover01.jpg"
-            }
-        }
-    ],
-    "ratings": [
-        {
-            "id": 1,
-            "idService": 1,
-            "stars": 5,
-            "review": "Adorei o Local, muito amor aos animais",
-            "thumbsUp": 20,
-            "thumbsDown": 0,
-            "userName": "Jussara Pinho"
-        },
-        {
-            "id": 2,
-            "idService": 1,
-            "stars": 4,
-            "review": "Instrutor muito dedicado e atencioso",
-            "thumbsUp": 10,
-            "thumbsDown": 0,
-            "userName": "Pedro de Souza"
-        },
-        {
-            "id": 3,
-            "idService": 5,
-            "stars": 2,
-            "review": "Achei desorganizado e atendimento fraco",
-            "thumbsUp": 10,
-            "thumbsDown": 4,
-            "userName": "Caio Siqueira"
-        },
-        {
-            "id": 4,
-            "idService": 8,
-            "stars": 4,
-            "review": "Estão de parabéns, meu cão adorou a comida",
-            "thumbsUp": 12,
-            "thumbsDown": 5,
-            "userName": "Ana Correia"
-        }
-    ]
+  "services": [
+    {
+      "id": 1,
+      "title": "Casinha Dog",
+      "description": "Um lugar Confortavel para o seu cão",
+      "stars": 4,
+      "image": "service01.jpg",
+      "cover": "cover01.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Pet da July",
+      "description": "Venha cuidar do seu dog com a July",
+      "stars": 5,
+      "image": "service02.jpg",
+      "cover": "cover02.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Dog Summer",
+      "description": "O Lugar perfeito para seu cão passar o verão",
+      "stars": 3,
+      "image": "service08.jpg",
+      "cover": "cover03.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Free Dog House",
+      "description": "Seu cachorro jamais se sentirá tão livre quanto aqui",
+      "stars": 2,
+      "image": "service04.jpg",
+      "cover": "cover04.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Bar do Cão",
+      "description": "Deixe seu cão se sentar com seus amigos e se divertir",
+      "stars": 3,
+      "image": "service05.jpg",
+      "cover": "cover05.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Cachorrão Hostel",
+      "description": "Entrará como um cãozinho e saíra como um cachorrão",
+      "stars": 4,
+      "image": "service06.jpg",
+      "cover": "cover06.jpg"
+    },
+    {
+      "id": 7,
+      "title": "Dog Happy",
+      "description": "Seu cachorro sentirá a alegria do nosso lar",
+      "stars": 4,
+      "image": "service07.jpg",
+      "cover": "cover07.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Ração do Jhonny",
+      "description": "Nossos alimentos são 100% organicos e entregamos em casa",
+      "stars": 5,
+      "image": "service03.jpg",
+      "cover": "cover08.jpg"
+    }
+  ],
+  "serviceshints": [
+    {
+      "id": 1,
+      "service": {
+        "id": 8,
+        "title": "Ração do Jhonny",
+        "description": "Nossos alimentos são 100% organicos e entregamos em casa",
+        "stars": 5,
+        "image": "service03.jpg",
+        "cover": "cover08.jpg"
+      }
+    },
+    {
+      "id": 2,
+      "service": {
+        "id": 7,
+        "title": "Dog Happy",
+        "description": "Seu cachorro sentirá a alegria do nosso lar",
+        "stars": 4,
+        "image": "service07.jpg",
+        "cover": "cover07.jpg"
+      }
+    },
+    {
+      "id": 3,
+      "service": {
+        "id": 5,
+        "title": "Bar do Cão",
+        "description": "Deixe seu cão se sentar com seus amigos e se divertir",
+        "stars": 3,
+        "image": "service05.jpg",
+        "cover": "cover05.jpg"
+      }
+    },
+    {
+      "id": 4,
+      "service": {
+        "id": 7,
+        "title": "Dog Happy",
+        "description": "Seu cachorro sentirá a alegria do nosso lar",
+        "stars": 4,
+        "image": "service07.jpg",
+        "cover": "cover01.jpg"
+      }
+    }
+  ],
+  "ratings": [
+    {
+      "id": 1,
+      "idService": 1,
+      "stars": 5,
+      "review": "Adorei o Local, muito amor aos animais",
+      "thumbsUp": 20,
+      "thumbsDown": 0,
+      "userName": "Jussara Pinho"
+    },
+    {
+      "id": 2,
+      "idService": 1,
+      "stars": 4,
+      "review": "Instrutor muito dedicado e atencioso",
+      "thumbsUp": 10,
+      "thumbsDown": 0,
+      "userName": "Pedro de Souza"
+    },
+    {
+      "id": 3,
+      "idService": 5,
+      "stars": 2,
+      "review": "Achei desorganizado e atendimento fraco",
+      "thumbsUp": 10,
+      "thumbsDown": 4,
+      "userName": "Caio Siqueira"
+    },
+    {
+      "id": 4,
+      "idService": 8,
+      "stars": 4,
+      "review": "Estão de parabéns, meu cão adorou a comida",
+      "thumbsUp": 12,
+      "thumbsDown": 5,
+      "userName": "Ana Correia"
+    }
+  ]
 }

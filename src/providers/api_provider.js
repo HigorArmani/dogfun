@@ -12,6 +12,16 @@ const ApiProviders = {
             })
     },
 
+    post(url, data, onSuccess, onFailure) {
+        axios.post(url, data)
+            .then(res => {
+                if (onSuccess != null) onSuccess(res)
+            })
+            .catch(err => {
+                if (onFailure != null) onFailure(err)
+            })
+    },
+
 }
 
 export default ApiProviders

@@ -9,6 +9,10 @@ const PlacesProvider = {
 
     get(id, onSuccess, onFailure) {
         ApiProviders.getList(`${API_SERVICES}/${id}`, onSuccess, onFailure)
+    },
+
+    post(data, onSuccess, onFailure) {
+        ApiProviders.post(API_SERVICES, data, onSuccess, onFailure)
     }
 
 }

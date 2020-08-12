@@ -21,7 +21,7 @@
   </v-card>
 </template>
 <script>
-import CoverImage from "@/components/shared/cover-image/CoverImage";
+import CoverImage from "@/components/shared/cover-image/CoverImage"
 export default {
   components: {
     CoverImage,
@@ -34,7 +34,7 @@ export default {
   },
   computed: {
     titleParams() {
-      return this.service.title.split(" ").join("-");
+      return this.service.title.split(" ").join("-")
     },
   },
 };
