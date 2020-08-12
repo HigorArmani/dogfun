@@ -7,7 +7,7 @@
       <v-rating :value="service.stars" color="amber" dense half-increments readonly size="20"></v-rating>
     </v-card-subtitle>
 
-    <v-card-text class="text-primary mContent">
+    <v-card-text class="text-primary dg-content">
       <div>{{service.description}}</div>
     </v-card-text>
 
@@ -21,7 +21,7 @@
   </v-card>
 </template>
 <script>
-import CoverImage from "@/components/shared/cover-image/CoverImage"
+import CoverImage from "@/modules/shared/components/cover-image/CoverImage"
 export default {
   components: {
     CoverImage,
@@ -40,7 +40,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.mContent {
+.dg-content {
   display: block;
   height: 50px;
 }

@@ -41,8 +41,8 @@
   </div>
 </template>
 <script>
-import ServiceHintProvider from "@/providers/services/service_hint_provider"
-import CoverImage from "@/components/shared/cover-image/CoverImage"
+import ServiceHintProvider from "@/modules/app/providers/service_hint_provider"
+import CoverImage from "@/modules/shared/components/cover-image/CoverImage"
 export default {
   components: {
     CoverImage,

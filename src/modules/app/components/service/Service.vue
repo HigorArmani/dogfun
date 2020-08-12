@@ -7,7 +7,7 @@
 </template>
 <script>
 import ServiceItem from "./service-item/ServiceItem.vue"
-import ServiceProvider from "@/providers/services/service_provider"
+import ServiceProvider from "@/modules/app/providers/service_provider"
 
 export default {
   components: {

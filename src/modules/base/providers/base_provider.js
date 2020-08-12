@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const ApiProviders = {
+const BaseProvider = {
 
     getList(url, onSuccess, onFailure) {
         axios.get(url)
@@ -24,4 +24,4 @@ const ApiProviders = {
 
 }
 
-export default ApiProviders
+export default BaseProvider

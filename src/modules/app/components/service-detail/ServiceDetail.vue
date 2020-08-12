@@ -47,10 +47,10 @@
 </template>
 
 <script>
-import Rating from "@/components/shared/rating/Rating.vue"
-import ServiceProvider from "@/providers/services/service_provider"
+import Rating from "@/modules/shared/components/rating/Rating.vue"
+import ServiceProvider from "@/modules/app/providers/service_provider"
+import RatingsProvider from "@/modules/app/providers/ratings_provider"
 import ServiceDetailHint from "./service-detail-hint/ServiceDetailHint"
-import RatingsProvider from "@/providers/globals/ratings_provider"
 
 export default {
   components: {
