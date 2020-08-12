@@ -107,7 +107,8 @@ export default {
         imagem: null,
         openingHours: null,
         stars: 4,
-        cover: "cover08.jpg"
+        cover: "cover08.jpg",
+        checkbox: false
       },
     }
   },
