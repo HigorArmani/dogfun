@@ -7,11 +7,11 @@
         <p class="dg-text">"{{rating.review}}"</p>
 
         <v-card-actions>
-          <v-row>
+          <v-row class="dg-user-comment" @click="redirectProfilePage(rating)">
             <v-avatar color="grey darken-3" size="35">
-              <v-img class="elevation-6" src="https://avataaars.io"></v-img>
+              <v-img class="elevation-6" :src="require('@/assets/images/profile02.jpg')"></v-img>
             </v-avatar>
-            <p class="dg-username">{{rating.userName}}</p>
+            <p class="dg-username">{{rating.name}}</p>
           </v-row>
 
           <v-row align="center" justify="end">
@@ -36,6 +36,11 @@ export default {
       required: true,
     },
   },
+  methods: {
+    redirectProfilePage(rating) {
+        this.$router.push({ name: "userprofile", params: {id: rating.username} }).catch(()=>{})
+    }
+  }
 };
 </script>
 
@@ -52,5 +57,12 @@ export default {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   margin-top: 10px;
   margin-left: 10px;
+}
+.dg-user-comment {
+  cursor: pointer;
+}
+.dg-user-comment:hover{
+  color:plum;
+  filter: brightness(0.8);
 }
 </style>

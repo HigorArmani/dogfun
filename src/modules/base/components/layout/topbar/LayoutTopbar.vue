@@ -43,7 +43,7 @@
         <template v-slot:activator="{ on, attrs }">
           <v-btn v-bind="attrs" v-on="on" text>
             <v-avatar size="36">
-              <v-img class="elevation-1" src="https://avataaars.io"></v-img>
+              <v-img class="elevation-1" :src="require('@/assets/images/profile01.jpg')"></v-img>
             </v-avatar>
           </v-btn>
         </template>
@@ -51,7 +51,7 @@
         <v-list>
           <v-list-item>
             <v-list-item-avatar>
-              <img :src="require('@/assets/images/profile02.jpg')" alt="John" />
+              <img :src="require('@/assets/images/profile01.jpg')" alt="John" />
             </v-list-item-avatar>
 
             <v-list-item-content>
@@ -73,12 +73,12 @@
 
           <v-list shaped>
             <v-list-item-group color="primary">
-              <v-list-item v-for="(item, i) in items" :key="i">
+              <v-list-item v-for="(option, i) in menuOptions" :key="i" @click="redirect(option)">
                 <v-list-item-icon>
-                  <v-icon v-text="item.icon" color="orange"></v-icon>
+                  <v-icon v-text="option.icon" color="orange" />
                 </v-list-item-icon>
                 <v-list-item-content>
-                  <v-list-item-title v-text="item.text"></v-list-item-title>
+                  <v-list-item-title v-text="option.text" />
                 </v-list-item-content>
               </v-list-item>
             </v-list-item-group>
@@ -92,14 +92,28 @@
 export default {
   data() {
     return {
-      items: [
-        { text: "Minha Conta", icon: "mdi-account-details" },
-        { text: "Meus Serviços", icon: "mdi-domain" },
-        { text: "Proventos", icon: "mdi-account-cash" },
+      menuOptions: [
+        {
+          text: "Meu Perfil",
+          icon: "mdi-account-details",
+          routerName: "userprofile",
+        },
+        {
+          text: "Meus Serviços",
+          icon: "mdi-domain",
+          routerName: "userservices",
+        },
+        { text: "Proventos", icon: "mdi-account-cash", routerName: "sometest" },
       ],
       closeOnClick: true,
       blocked: false,
     };
+  },
+  methods: {
+    redirect(option) {
+      if(this.$route.name !== option.routerName)
+        this.$router.push({ name: option.routerName })
+    },
   },
 };
 </script>

@@ -3,13 +3,20 @@
     <v-row>
       <v-col cols="9">
         <v-card v-if="service">
-          <v-img height="250" :src="require('@/assets/images/' + service.image)" />
+          <SlideImage :images="images" />
 
           <v-card-title>{{service.title}}</v-card-title>
 
           <v-card-text>
             <v-row align="center" class="mx-0">
-              <v-rating :value="service.stars" color="amber" dense half-increments readonly size="14"></v-rating>
+              <v-rating
+                :value="service.stars"
+                color="amber"
+                dense
+                half-increments
+                readonly
+                size="14"
+              ></v-rating>
 
               <div class="grey--text ml-4">{{service.stars}} (25 votações)</div>
             </v-row>
@@ -48,26 +55,42 @@
 
 <script>
 import Rating from "@/modules/shared/components/rating/Rating.vue"
+import SlideImage from "@/modules/shared/components/slide-image/SlideImage.vue"
 import ServiceProvider from "@/modules/app/providers/service_provider"
-import RatingsProvider from "@/modules/app/providers/ratings_provider"
+import ServiceRatingProvider from "@/modules/app/providers/service_rating_provider"
 import ServiceDetailHint from "./service-detail-hint/ServiceDetailHint"
 
 export default {
   components: {
     Rating,
     ServiceDetailHint,
+    SlideImage,
   },
   data() {
     return {
       id: this.$route.params.id,
       selection: 1,
       service: null,
-      ratings: []
+      ratings: [],
+      images: [
+        {
+          src: "slide01.jpg",
+        },
+        {
+          src: "slide02.jpg",
+        },
+        {
+          src: "slide03.jpg",
+        },
+        {
+          src: "slide04.jpg",
+        },
+      ],
     }
   },
   methods: {
     getList() {
-      ServiceProvider.get(this.id, success => this.service = success.data)
+      ServiceProvider.get(this.id, (success) => (this.service = success.data))
     },
   },
   beforeRouteUpdate(to, from, next) {
@@ -77,7 +100,7 @@ export default {
   },
   mounted() {
     this.getList(),
-    RatingsProvider.getList(success => this.ratings = success.data)
+      ServiceRatingProvider.getList((success) => (this.ratings = success.data))
   },
 }
 
