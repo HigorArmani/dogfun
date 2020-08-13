@@ -1,7 +1,7 @@
 import BaseProvider from "@/modules/base/providers/base_provider"
 import { API_SERVICES } from "@/modules/shared/utils/cons/api"
 
-const PlacesProvider = {
+const ServiceProvider = {
 
     getList(onSuccess, onFailure) {
         BaseProvider.getList(API_SERVICES, onSuccess, onFailure)
@@ -17,4 +17,4 @@ const PlacesProvider = {
 
 }
 
-export default PlacesProvider
+export default ServiceProvider
